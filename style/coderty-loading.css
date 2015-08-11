@@ -1,0 +1,44 @@
+.spinner-pers-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.spinner-pers {
+    animation: vueltas 1.4s linear infinite;
+}
+
+@keyframes vueltas {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(270deg); }
+}
+
+.path {
+    stroke-dasharray: 187;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation:
+    guion 1.4s ease-in-out infinite,
+    colores 5.6s ease-in-out infinite;
+}
+
+@keyframes colores {
+    0% { stroke: #4285F4; }
+    25% { stroke: #DE3E35; }
+    50% { stroke: #F7C223; }
+    75% { stroke: #1B9A59; }
+    100% { stroke: #4285F4; }
+}
+
+@keyframes guion {
+    0% { stroke-dashoffset: 187; }
+    50% {
+        stroke-dashoffset: 45.75;
+        transform:rotate(135deg);
+    }
+    100% {
+        stroke-dashoffset: 187;
+        transform:rotate(450deg);
+    }
+}
